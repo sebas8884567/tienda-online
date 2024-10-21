@@ -1,0 +1,174 @@
+/* Estilo global */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif; /* Cambiado a una fuente más elegante */
+    scroll-behavior: smooth;
+    height: 100%;
+    color: #124150;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+.header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra para más profundidad */
+}
+
+.logo {
+    font-size: 1.8rem; /* Aumentar tamaño del logo */
+    font-weight: bold;
+    color: #124150;
+}
+
+.nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav a {
+    color: #16A34A;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.nav a:hover {
+    background-color: #28C76F;
+    color: white;
+}
+
+.nav a:active {
+    background-color: #0B6B3A;
+    color: white;
+}
+
+/* Estilos para main y el contenido */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    font-weight: bold;
+    background-color: #EEF0F4;
+}
+
+/* Contenido de texto centrado */
+.text-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+.img-left, .img-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centrar verticalmente */
+}
+
+.img-left {
+    left: 0; /* Posicionar en el lado izquierdo */
+}
+
+.img-right {
+    right: 0; /* Posicionar en el lado derecho */
+}
+
+/* Imágenes ajustadas */
+.img-left img, .img-right img {
+    width: 350px; /* Tamaño de las imágenes */
+    height: auto;
+    opacity: 0.8; /* Transparencia para no distraer demasiado */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.img-left img:hover, .img-right img:hover {
+    opacity: 1; /* Imágenes completamente visibles al pasar el ratón */
+}
+
+/* Footer */
+.footer {
+    background-color: #124150; /* Color oscuro acorde con el tema */
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0.5rem 0; /* Margen para el texto del copyright */
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-nav a {
+    color: #16A34A;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.footer-nav a:hover {
+    color: #28C76F; /* Cambia el color al pasar el mouse */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .nav {
+        flex-direction: column; /* Cambia la navegación a columna */
+        gap: 0.3rem; /* Espaciado entre elementos */
+        width: 100%; /* Ancho completo */
+        margin-top: 1rem; /* Espacio encima de la navegación */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Reducir tamaño del logo */
+    }
+
+    .main-content {
+        flex-direction: column; /* Cambiar a columna */
+        padding: 1rem; /* Ajustar padding */
+    }
+
+    .img-left, .img-right {
+        position: relative; /* Cambiar a posición relativa para flexibilidad */
+        width: 80%; /* Ajustar el tamaño de las imágenes */
+        margin: 1rem 0; /* Añadir margen vertical */
+    }
+
+    .img-left img, .img-right img {
+        width: 100%; /* Hacer que las imágenes se ajusten al 100% del contenedor */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 0.8rem; /* Reducir el tamaño del texto en el footer */
+    }
+
+    .footer-nav {
+        flex-direction: column; /* Cambiar a columna en pantallas muy pequeñas */
+    }
+
+    .footer-nav a {
+        font-size: 0.9rem; /* Reducir el tamaño de los enlaces */
+    }
+}
