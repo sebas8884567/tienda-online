@@ -166,6 +166,16 @@ html, body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.product-card .titulo-principal {
+    margin-bottom: 5px; /* Controla el espacio entre el título principal y el subtítulo */
+}
+
+.product-card .subtitulo {
+    margin-top: 0; /* Evita un margen superior innecesario */
+    font-size: 1.2rem; /* Ajusta el tamaño del subtítulo, si es necesario */
+    font-weight: normal; /* Diferencia visualmente del título principal */
+}
+
 
 /* Contenedor para precio y tallas */
 .price-size-container {
