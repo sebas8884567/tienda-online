@@ -275,3 +275,60 @@ html, body {
         flex: 1 1 100%;
     }
 }
+/* Ajustes para pantallas medianas (tablets y laptops pequeños) */
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .hero h1 {
+      font-size: 1.5rem;
+      padding: 0 1rem; /* Añade espacio a los lados en pantallas pequeñas */
+    }
+  
+    .contact-container {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    .contact-block {
+      max-width: 90%;
+      text-align: center;
+    }
+  
+    .footer-nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  
+  /* Ajustes para pantallas pequeñas (móviles) */
+  @media (max-width: 480px) {
+    .header {
+      padding: 1rem;
+    }
+  
+    .hero h1 {
+      font-size: 1.2rem;
+    }
+  
+    .contact-block h2 {
+      font-size: 1rem;
+    }
+  
+    .chat-icons a .icon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .footer-nav a {
+      font-size: 0.9rem;
+    }
+  }
